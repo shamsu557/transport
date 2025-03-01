@@ -66,6 +66,48 @@
             background-color: #28a745;
             border-color: #28a745;
         }
+        .leader-image {
+    width: 250px; /* Ensure a fixed width */
+    height: 250px; /* Make height equal to width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%; /* Makes it circular */
+    margin: 0 auto; /* Centers the images */
+}
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.slide-in {
+        opacity: 0;
+        transform: translateY(-50px);
+        animation: slideDown 1s ease-in-out forwards;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
     </style>
 </head>
 <body>
@@ -128,30 +170,88 @@
         <h2 class="text-danger">Visionary Leaders Driving Progress</h2>
         <div class="row">
             <div class="col-md-6">
-                <img src="governor.jfif" alt="Governor Abba Kabir Yusuf" class="img-fluid rounded">
+                <div class="leader-image">
+                    <img src="governor.jfif" alt="Governor Abba Kabir Yusuf" class="img-fluid rounded">
+                </div>
                 <h3 class="text-success">Governor Abba Kabir Yusuf</h3>
                 <p>Governor of Kano State</p>
             </div>
             <div class="col-md-6">
-                <img src="commissioner-image.jpg" alt="Commissioner Ibrahim Namadi" class="img-fluid rounded">
-                <h3 class="text-success">Commissioner Ibrahim Namadi</h3>
+                <div class="leader-image">
+                    <img src="commissioner.jfif" alt="Commissioner Ibrahim Namadi" class="img-fluid rounded">
+                </div>
+                <h3 class="text-success">Hon. Ibrahim Ali Namadi</h3>
                 <p>Commissioner for Transportation</p>
             </div>
         </div>
     </section>
-    
     <section class="container my-5">
-        <h2 class="text-danger text-center">Transportation Services</h2>
-        <p class="text-center">Choose the service you need:</p>
-        <ul class="list-group text-center">
-            <li class="list-group-item">Vehicle Registration: Register new vehicles or renew your vehicle registration.</li>
-            <li class="list-group-item">Driver's License: Apply for a new driver's license or renew an existing one.</li>
-            <li class="list-group-item">Transport Schedules: View and access Kano State public transport schedules.</li>
-        </ul>
-        <div class="text-center mt-3">
-            <a href="#registration-options" class="btn btn-primary">Proceed to Registration</a>
+        <h2 class="text-danger text-center">Departments in the Ministry of  Kano State</h2>
+        <p class="text-center">Explore the various departments dedicated to improving transportation in Kano State:</p>
+        <div class="row">
+               <!-- Department 2 -->
+               <div class="col-md-4 mb-4 slide-in">
+                <div class="card h-100">
+                    <img src="account.jfif" class="card-img-top" alt="Road Transport and Mass Transit Administration">
+                    <div class="card-body">
+                        <h5 class="card-title">Accounts and Finance</h5>
+                    <p class="card-text">Manages the financial operations, budgeting, and expenditure tracking of the Ministry to ensure accountability and transparency.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Department 1 -->
+            <div class="col-md-4 mb-4 slide-in">
+                <div class="card h-100">
+                    <img src="Kano-Bus-mass-transit.jpg" class="card-img-top" alt="Transport Planning and Coordination">
+                    <div class="card-body">
+                        <h5 class="card-title">Transport Planning and Coordination</h5>
+                        <p class="card-text">Responsible for formulating and coordinating transportation policies and strategies to ensure an efficient transport system in Kano State.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Department 2 -->
+            <div class="col-md-4 mb-4 slide-in">
+                <div class="card h-100">
+                    <img src="infrastructure.jfif" class="card-img-top" alt="Road Transport and Mass Transit Administration">
+                    <div class="card-body">
+                        <h5 class="card-title">Road Transport and Mass Transit Administration</h5>
+                        <p class="card-text">Oversees the administration of road transport services and the development of mass transit systems to enhance public mobility.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Department 3 -->
+            <div class="col-md-4 mb-4 slide-in">
+                <div class="card h-100">
+                    <img src="engineering.jfif" class="card-img-top" alt="Engineering Services">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering Services</h5>
+                        <p class="card-text">Provides engineering support for transportation infrastructure projects, ensuring adherence to safety and quality standards.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Department 4 -->
+            <div class="col-md-4 mb-4 slide-in">
+                <div class="card h-100">
+                    <img src="Special+Responsibilities.jpg" class="card-img-top" alt="Special Duties">
+                    <div class="card-body">
+                        <h5 class="card-title">Special Duties</h5>
+                        <p class="card-text">Handles specific assignments and projects that require specialized attention within the transportation sector.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Department 5 -->
+            <div class="col-md-4 mb-4 slide-in">
+                <div class="card h-100">
+                    <img src="reform.jfif" class="card-img-top" alt="Reform Coordination and Service Improvement">
+                    <div class="card-body">
+                        <h5 class="card-title">Reform Coordination and Service Improvement</h5>
+                        <p class="card-text">Focuses on implementing reforms and enhancing service delivery within the Ministry of Transportation.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
