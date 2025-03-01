@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kano State Ministry of Transportation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .hero {
+            position: relative;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .carousel-caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .quick-links a {
+            text-decoration: none;
+            color: white;
+            background: #dc3545;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px;
+        }
+        .header-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background: white;
+        }
+        .header-logos img {
+            height: 80px;
+            margin: 0 15px;
+        }
+        .navbar {
+            background: linear-gradient(to right, #dc3545, #28a745, white);
+        }
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-logos">
+        <img src="kanologo.png" alt="Kano State Logo">
+        <h1 class="text-danger">Kano State Ministry of Transportation</h1>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="hero">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Kano-government-house1.jpg" class="d-block w-100" alt="Kano Government House">
+                    <div class="carousel-caption">
+                        <h1>Government's Commitment to Infrastructure</h1>
+                        <p>Ensuring world-class transport infrastructure for all citizens.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Kano-state-1.jpg" class="d-block w-100" alt="Modern Roads in Kano">
+                    <div class="carousel-caption">
+                        <h1>Modern Road Networks</h1>
+                        <p>Expanding and maintaining high-quality road networks across Kano State.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="railway.jfif" class="d-block w-100" alt="Railway System">
+                    <div class="carousel-caption">
+                        <h1>Efficient Public Transportation</h1>
+                        <p>Investing in railway and urban transit systems for seamless mobility.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="kano infrastructure.jpg" class="d-block w-100" alt="Kano State Infrastructure">
+                    <div class="carousel-caption">
+                        <h1>Transforming Kano’s Transport Landscape</h1>
+                        <p>Implementing sustainable and modern transportation solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="container my-5 text-center bg-white">
+        <h2 class="text-danger">Visionary Leaders Driving Progress</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="governor.jfif" alt="Governor Abba Kabir Yusuf" class="img-fluid rounded">
+                <h3 class="text-success">Governor Abba Kabir Yusuf</h3>
+                <p>Governor of Kano State</p>
+            </div>
+            <div class="col-md-6">
+                <img src="commissioner-image.jpg" alt="Commissioner Ibrahim Namadi" class="img-fluid rounded">
+                <h3 class="text-success">Commissioner Ibrahim Namadi</h3>
+                <p>Commissioner for Transportation</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container my-5">
+        <h2 class="text-danger text-center">Transportation Services</h2>
+        <p class="text-center">Choose the service you need:</p>
+        <ul class="list-group text-center">
+            <li class="list-group-item">Vehicle Registration: Register new vehicles or renew your vehicle registration.</li>
+            <li class="list-group-item">Driver's License: Apply for a new driver's license or renew an existing one.</li>
+            <li class="list-group-item">Transport Schedules: View and access Kano State public transport schedules.</li>
+        </ul>
+        <div class="text-center mt-3">
+            <a href="#registration-options" class="btn btn-primary">Proceed to Registration</a>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
