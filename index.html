@@ -43,6 +43,7 @@
                 height: 68vh;
             }
         }
+
         .quick-links a {
             text-decoration: none;
             color: white;
@@ -54,7 +55,7 @@
         }
         .header-logos {
             display: flex;
-            justify-content: center;
+            justify-content: left;
             align-items: center;
             padding: 10px;
             background: white;
@@ -132,12 +133,35 @@
     #myBtn:hover {
         background-color: #ddd;
     }
+     /* Reduce overall container width */
+     .news-section {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    /* Limit carousel height and width */
+    #newsCarousel {
+        max-width: 900px;
+        max-height: 300px;
+        overflow: hidden;
+    }
+
+    /* Limit image height to keep it compact */
+    .news-img {
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    /* Adjust caption size */
+    .carousel-caption {
+        font-size: 0.9rem;
+    }
     </style>
 </head>
 <body>
     <div class="header-logos">
         <img src="kano-logo.jfif" alt="Kano State Logo">
-        <h1 class="text-danger">Kano State Ministry of Transportation</h1>
+        <h5 class="text-danger text-center">Kano State Ministry of Transportation</h5>
     </div>
     
     <nav class="navbar navbar-expand-lg">
@@ -191,69 +215,86 @@
     </header>
     
     <section class="container my-5 text-center bg-white">
-        <h2 class="text-danger">Visionary Leaders Driving Progress</h2>
+        <h2 class="text-white">Visionary Leaders Driving Progress</h2>
         <div class="row">
             <div class="col-md-6">
                 <div class="leader-image">
                     <img src="governor.jfif" alt="Governor Abba Kabir Yusuf" class="img-fluid rounded">
                 </div>
-                <h3 class="text-success">Governor Abba Kabir Yusuf</h3>
-                <p>Governor of Kano State</p>
+                <div class="bg-danger text-white">
+                    <h3 class="">His Excellency</h3>
+                <h1>ALH. ABBA KABIR  YUSUF</h1>
+                <p>EXecutive Governor Kano State</p>
+                </div>
+                
             </div>
             <div class="col-md-6">
                 <div class="leader-image">
-                    <img src="commissioner.jfif" alt="Commissioner Ibrahim Namadi" class="img-fluid rounded">
+                    <img src="comminer.jfif" alt="Commissioner Ibrahim Namadi" class="img-fluid rounded">
                 </div>
-                <h3 class="text-success">Hon. Ibrahim Ali Namadi</h3>
-                <p>Commissioner for Transportation</p>
+                <div class="bg-danger text-white">
+                    <h3 class="">HON</h3>
+                <h1>IBRAHIM ALI NAMADI</h1>
+                <p>Commissioner of Transport Kano State</p>
+                </div>
             </div>
         </div>
     </section>
     <section class="container my-5">
-        <h2 class="text-danger text-center">Departments in the Ministry of  Kano State</h2>
-        <p class="text-center">Explore the various departments dedicated to improving transportation in Kano State:</p>
+        <h2 class="text-danger text-center">Sectors in the Ministry of Transportation Kano State</h2>
+        <p class="text-center">Explore the various sectors dedicated to improving transportation in Kano State:</p>
         <div class="row">
-               <!-- Department 2 -->
-               <div class="col-md-4 mb-4 slide-in">
-                <div class="card h-100">
-                    <img src="account.jfif" class="card-img-top" alt="Road Transport and Mass Transit Administration">
-                    <div class="card-body">
-                        <h5 class="card-title">Accounts and Finance</h5>
-                    <p class="card-text">Manages the financial operations, budgeting, and expenditure tracking of the Ministry to ensure accountability and transparency.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Department 1 -->
-            <div class="col-md-4 mb-4 slide-in">
-                <div class="card h-100">
-                    <img src="Kano-Bus-mass-transit.jpg" class="card-img-top" alt="Transport Planning and Coordination">
-                    <div class="card-body">
-                        <h5 class="card-title">Transport Planning and Coordination</h5>
-                        <p class="card-text">Responsible for formulating and coordinating transportation policies and strategies to ensure an efficient transport system in Kano State.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Department 2 -->
+            <!-- Road Transport and Mass Transit Administration -->
             <div class="col-md-4 mb-4 slide-in">
                 <div class="card h-100">
                     <img src="infrastructure.jfif" class="card-img-top" alt="Road Transport and Mass Transit Administration">
                     <div class="card-body">
                         <h5 class="card-title">Road Transport and Mass Transit Administration</h5>
-                        <p class="card-text">Oversees the administration of road transport services and the development of mass transit systems to enhance public mobility.</p>
+                        <p class="card-text">Oversees road transport services and the development of mass transit systems to enhance public mobility.</p>
                     </div>
                 </div>
             </div>
-            <!-- Department 3 -->
+            <!-- Traffic Management (KAROTA) -->
             <div class="col-md-4 mb-4 slide-in">
                 <div class="card h-100">
-                    <img src="engineering.jfif" class="card-img-top" alt="Engineering Services">
+                    <img src="karota.jfif" class="card-img-top" alt="Traffic Management">
                     <div class="card-body">
-                        <h5 class="card-title">Engineering Services</h5>
-                        <p class="card-text">Provides engineering support for transportation infrastructure projects, ensuring adherence to safety and quality standards.</p>
+                        <h5 class="card-title">Traffic Management (KAROTA)</h5>
+                        <p class="card-text">Enforces traffic regulations, manages congestion, and ensures road safety within Kano State.</p>
                     </div>
                 </div>
             </div>
-            <!-- Department 4 -->
+            <!-- Vehicle Inspection Office (VIO) -->
+            <div class="col-md-4 mb-4 slide-in">
+                <div class="card h-100">
+                    <img src="vio.jfif" class="card-img-top" alt="Vehicle Inspection Office (VIO)">
+                    <div class="card-body">
+                        <h5 class="card-title">Vehicle Inspection Office (VIO)</h5>
+                        <p class="card-text">Handles vehicle inspection, roadworthiness certification, driver testing, and safety compliance.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Transport Policy and Planning -->
+            <div class="col-md-4 mb-4 slide-in">
+                <div class="card h-100">
+                    <img src="infrastructure.jfif" class="card-img-top" alt="Transport Policy and Planning">
+                    <div class="card-body">
+                        <h5 class="card-title">Transport Policy and Planning</h5>
+                        <p class="card-text">Develops and implements transport policies to improve mobility and connectivity across the state.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Engineering and Infrastructure Development -->
+            <div class="col-md-4 mb-4 slide-in">
+                <div class="card h-100">
+                    <img src="engineering.jfif" class="card-img-top" alt="Engineering and Infrastructure Development">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering and Infrastructure Development</h5>
+                        <p class="card-text">Oversees the construction and maintenance of transportation infrastructure, ensuring quality and safety.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Special Duties -->
             <div class="col-md-4 mb-4 slide-in">
                 <div class="card h-100">
                     <img src="Special+Responsibilities.jpg" class="card-img-top" alt="Special Duties">
@@ -263,7 +304,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Department 5 -->
+            <!-- Reform Coordination and Service Improvement -->  
             <div class="col-md-4 mb-4 slide-in">
                 <div class="card h-100">
                     <img src="reform.jfif" class="card-img-top" alt="Reform Coordination and Service Improvement">
@@ -275,6 +316,157 @@
             </div>
         </div>
     </section>
+
+    <section class="container my-5">
+    <h2 class="text-primary text-center">Digital Transport Services</h2>
+    <p class="text-center">Access a variety of online transportation services, resources, and regulatory tools designed to enhance mobility and compliance.</p>
+
+    <div class="row">
+        <!-- Online Vehicle Registration -->
+        <div class="col-md-4 mb-4 slide-in">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Vehicle Registration</h5>
+                    <p class="card-text">Register your vehicle and renew your license online.</p>
+                    <a href="https://www.evrs.ng/" class="btn btn-primary" target="_blank">Visit Portal</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Driver’s License Application -->
+        <div class="col-md-4 mb-4 slide-in">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Driver’s License</h5>
+                    <p class="card-text">Apply for or renew your driver’s license online.</p>
+                    <a href="https://www.nigeriadriverslicence.org/" class="btn btn-primary" target="_blank">Apply Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- License Verification -->
+        <div class="col-md-4 mb-4 slide-in">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">License Verification</h5>
+                    <p class="card-text">Verify the authenticity of a driver’s license.</p>
+                    <a href="https://ndlverification.frsc.gov.ng/verify" class="btn btn-primary">Verify Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Offences and Penalties -->
+        <div class="col-md-4 mb-4 slide-in">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Offences & Penalties</h5>
+                    <p class="card-text">Check traffic offences and penalty details.</p>
+                    <a href="https://frsc.gov.ng/offences-penalties-2/" class="btn btn-primary" target="_blank">View Details</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Official Foreign Exchange Rate -->
+        <div class="col-md-4 mb-4 slide-in">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Foreign Exchange Rate</h5>
+                    <p class="card-text">Get the latest official foreign exchange rates.</p>
+                    <a href="https://www.cbn.gov.ng/rates/" class="btn btn-primary" target="_blank">Check Rates</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Courier Service Registration -->
+        <div class="col-md-4 mb-4 slide-in">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Courier Service Registration</h5>
+                    <p class="card-text">Register and manage courier services.</p>
+                    <a href="https://nipost.gov.ng/" class="btn btn-primary" target="_blank">Register Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rail E-Ticket -->
+        <div class="col-md-4 mb-4 slide-in">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Rail E-Ticket</h5>
+                    <p class="card-text">Book and manage railway travel tickets online.</p>
+                    <a href="https://nrc.tps.ng/#/" class="btn btn-primary" target="_blank">Book Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- KAROTA Fine Payment -->
+        <div class="col-md-4 mb-4 slide-in">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">KAROTA Fine Payment</h5>
+                    <p class="card-text">Pay traffic fines managed by KAROTA.</p>
+                    <a href="#" class="btn btn-primary" target="_blank">Pay Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container my-5 news-section">
+    <h2 class="text-primary text-center">News & Events</h2>
+    <p class="text-center">Latest Updates in the Transportation Sector</p>
+
+    <!-- News Carousel -->
+    <div id="newsCarousel" class="carousel slide mx-auto" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="kano infrastructure.jpg" class="d-block w-100 news-img" alt="Intelligent Traffic Light System">
+                <div class="carousel-caption bg-dark bg-opacity-50 p-2 rounded">
+                    <h6>🚦 Kano State Launches Intelligent Traffic Light System</h6>
+                    <p><strong>📅 March 5, 2025</strong></p>
+                    <a href="#" class="btn btn-sm btn-primary">🔗 Read More</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Kano-Bus-mass-transit.jpg" class="d-block w-100 news-img" alt="Urban Bus Transit">
+                <div class="carousel-caption bg-dark bg-opacity-50 p-2 rounded">
+                    <h6>🚍 Governor Flags Off New Urban Bus Transit Scheme</h6>
+                    <p><strong>📅 February 28, 2025</strong></p>
+                    <a href="#" class="btn btn-sm btn-primary">🔗 Read More</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="kano arial.jfif" class="d-block w-100 news-img" alt="Road Rehabilitation Project">
+                <div class="carousel-caption bg-dark bg-opacity-50 p-2 rounded">
+                    <h6>🛣️ Road Rehabilitation Project Kicks Off Across Key Highways</h6>
+                    <p><strong>📅 February 20, 2025</strong></p>
+                    <a href="#" class="btn btn-sm btn-primary">🔗 Read More</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Kano-government-house1.jpg" class="d-block w-100 news-img" alt="Ride-Hailing Services">
+                <div class="carousel-caption bg-dark bg-opacity-50 p-2 rounded">
+                    <h6>🚖 Kano Partners with Ride-Hailing Services for Safer Transport</h6>
+                    <p><strong>📅 February 15, 2025</strong></p>
+                    <a href="#" class="btn btn-sm btn-primary">🔗 Read More</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="karota.jfif" class="d-block w-100 news-img" alt="Road Safety Campaign">
+                <div class="carousel-caption bg-dark bg-opacity-50 p-2 rounded">
+                    <h6>🚧 KAROTA Intensifies Road Safety Campaign</h6>
+                    <p><strong>📅 February 10, 2025</strong></p>
+                    <a href="#" class="btn btn-sm btn-primary">🔗 Read More</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
  <!-- Footer -->
 <footer class="footer text-white mt-3 py-3">
     <div class="container">
@@ -287,12 +479,12 @@
             <div class="col-md-4">
                 <h6 class="mb-1">Contact Us</h6>
                 <p class="small mb-0">Ministry of Transportation, Kano State</p>
-                <p class="small mb-0">No. 1 Government House Road, Kano</p>
+                <p class="small mb-0">No. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxx</p>
             </div>
             <div class="col-md-4">
                 <h6 class="mb-1">Call Us</h6>
-                <p class="small mb-0">+234 802 345 6789</p>
-                <p class="small mb-0">+234 701 234 5678</p>
+                <p class="small mb-0">+234 xxxxxxxxxxx</p>
+                <p class="small mb-0">+234 xxxxxxxxxxx</p>
             </div>
             <div class="col-md-4">
                 <h6 class="mb-1">Email Us</h6>
