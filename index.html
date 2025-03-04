@@ -133,22 +133,29 @@
     #myBtn:hover {
         background-color: #ddd;
     }
-     /* Reduce overall container width */
+  /* Reduce overall container width */
+  
+    /* Limit carousel height and width */
+    #newsCarousel {
+        max-width: 900px;
+        max-height: 450px;
+        overflow: hidden;
+        margin-bottom: 50%;
+    }
+
+
+    /* Adjust caption size */
+    .carousel-caption {
+        font-size: 0.9rem;
+    }    /* Reduce overall container width */
      .news-section {
         max-width: 80%;
         margin: auto;
     }
 
-    /* Limit carousel height and width */
-    #newsCarousel {
-        max-width: 900px;
-        max-height: 300px;
-        overflow: hidden;
-    }
-
     /* Limit image height to keep it compact */
     .news-img {
-        max-height: 300px;
+        max-height: 450px;
         object-fit: cover;
     }
 
