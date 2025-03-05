@@ -169,23 +169,20 @@
     z-index: -2; /* Moves image behind the overlay */
 }
 
-/* Full-screen opacity overlay */
-.news-overlay {
+/* Full-screen opacity overlay + text container */
+.news-caption {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1; /* Ensures overlay is above the image but behind the text */
-}
-
-/* News caption box */
-.news-caption {
-    z-index: 1; /* Keeps text above overlay */
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay covering entire image */
     color: white;
-    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers text vertically */
+    align-items: center; /* Centers text horizontally */
+    text-align: center;
     padding: 20px;
-    border-radius: 8px;
-    width: 80%;
+    z-index: 1;
 }
 
 /* Active news item */
@@ -193,6 +190,82 @@
     opacity: 1;
     transform: translateY(0);
 }
+/* Overlay Container */
+.overlay-container {
+    position: relative;
+}
+
+/* Background Image */
+.overlay-image {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+/* Overlay Content */
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Hero Container */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Set fixed height like a hero section */
+    background: url('kano infrastructure.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px; /* Optional: Adds rounded edges */
+}
+
+/* Overlay Content */
+.overlay-content {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 80%;
+}
+
+/* Text Styling */
+.overlay-content h2,
+.overlay-content p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* List Styling */
+.service-list {
+    list-style: none;
+    padding: 0;
+}
+
+.service-list li {
+    margin: 10px 0;
+}
+
+.service-list a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.service-list a:hover {
+    text-decoration: underline;
+}
+
+
 
     </style>
 </head>
@@ -354,101 +427,24 @@
             </div>
         </div>
     </section>
+    <section class="hero-container">
+        <div class="overlay-content text-center">
+            <h2 class="text-white">Quick Access</h2>
+            <p class="text-white">
+                These essential digital transport services are available through official portals, 
+                providing easy access to registration, verification, and compliance resources.
+            </p>
+            <ul class="service-list">
+                <li><a href="https://www.evrs.ng/" target="_blank">Vehicle Registration</a></li>
+                <li><a href="https://www.nigeriadriverslicence.org/" target="_blank">Driver’s License</a></li>
+                <li><a href="https://ndlverification.frsc.gov.ng/verify" target="_blank">License Verification</a></li>
+                <li><a href="https://frsc.gov.ng/offences-penalties-2/" target="_blank">Offences & Penalties</a></li>
+                <li><a href="https://www.cbn.gov.ng/rates/" target="_blank">Foreign Exchange Rate</a></li>
+            </ul>
+        </div>
+    </section>
+    
 
-    <section class="container my-5">
-    <h2 class="text-primary text-center">Digital Transport Services</h2>
-    <p class="text-center">Access a variety of online transportation services, resources, and regulatory tools designed to enhance mobility and compliance.</p>
-
-    <div class="row">
-        <!-- Online Vehicle Registration -->
-        <div class="col-md-4 mb-4 slide-in">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Vehicle Registration</h5>
-                    <p class="card-text">Register your vehicle and renew your license online.</p>
-                    <a href="https://www.evrs.ng/" class="btn btn-primary" target="_blank">Visit Portal</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Driver’s License Application -->
-        <div class="col-md-4 mb-4 slide-in">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Driver’s License</h5>
-                    <p class="card-text">Apply for or renew your driver’s license online.</p>
-                    <a href="https://www.nigeriadriverslicence.org/" class="btn btn-primary" target="_blank">Apply Now</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- License Verification -->
-        <div class="col-md-4 mb-4 slide-in">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">License Verification</h5>
-                    <p class="card-text">Verify the authenticity of a driver’s license.</p>
-                    <a href="https://ndlverification.frsc.gov.ng/verify" class="btn btn-primary">Verify Now</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Offences and Penalties -->
-        <div class="col-md-4 mb-4 slide-in">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Offences & Penalties</h5>
-                    <p class="card-text">Check traffic offences and penalty details.</p>
-                    <a href="https://frsc.gov.ng/offences-penalties-2/" class="btn btn-primary" target="_blank">View Details</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Official Foreign Exchange Rate -->
-        <div class="col-md-4 mb-4 slide-in">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Foreign Exchange Rate</h5>
-                    <p class="card-text">Get the latest official foreign exchange rates.</p>
-                    <a href="https://www.cbn.gov.ng/rates/" class="btn btn-primary" target="_blank">Check Rates</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Courier Service Registration -->
-        <div class="col-md-4 mb-4 slide-in">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Courier Service Registration</h5>
-                    <p class="card-text">Register and manage courier services.</p>
-                    <a href="https://nipost.gov.ng/" class="btn btn-primary" target="_blank">Register Now</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Rail E-Ticket -->
-        <div class="col-md-4 mb-4 slide-in">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Rail E-Ticket</h5>
-                    <p class="card-text">Book and manage railway travel tickets online.</p>
-                    <a href="https://nrc.tps.ng/#/" class="btn btn-primary" target="_blank">Book Now</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- KAROTA Fine Payment -->
-        <div class="col-md-4 mb-4 slide-in">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">KAROTA Fine Payment</h5>
-                    <p class="card-text">Pay traffic fines managed by KAROTA.</p>
-                    <a href="#" class="btn btn-primary" target="_blank">Pay Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="container my-5 news-section">
     <h2 class="text-primary text-center">News & Events</h2>
     <p class="text-center">Latest Updates in the Transportation Sector</p>
