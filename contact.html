@@ -12,48 +12,54 @@
     <link rel="stylesheet" href="style.css">
     <body>
         <!-- First Navbar -->
-     <nav class="navbar navbar-light bg-white text-dark fixed-top first-navbar">
-         <img src="kano-logo.jfif" alt="Education Cap" class="circular-img fixed-left-img">
-         <span class="navbar-brand-name text-danger">Kano Ministry of Transportation</span>
-         <img src="kano-logo.jfif" alt="Professor" class="circular-img fixed-right-img">
-       </nav>
-       
-       <!-- Second Navbar -->
-       <nav class="navbar navbar-expand-lg navbar-dark text-white second-navbar">
-         <div class="navbar-toggler" type="button" onclick="toggleNavbar()">
-             <span class="navbar-toggler-icon"></span>
-         </div>
-         <button class="cancel-btn" style="display:none;" onclick="toggleNavbar()">×</button>
-         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-             <ul class="navbar-nav">
-                 <li class="nav-item">
-                     <a class="nav-link text-danger" href="index.html">Home</a>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link text-danger" href="about.html">About</a>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link text-danger" href="#services.html">Services</a>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link text-danger"  href="#projects">Projects</a></li>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link text-danger" href="#contact">Contact</a></li>
-                 </li>
-             </ul>
-         </div>
-       </nav>
-       <br>
-    <header class="bg-dark text-white text-center py-4 mt-5">
-        <h1>Contact Us</h1>
-    </header>
+<nav class="navbar navbar-light bg-white text-dark fixed-top first-navbar">
+    <img src="kano-logo.jfif" alt="Education Cap" class="circular-img fixed-left-img">
+    <span class="navbar-brand-name text-danger">Kano Ministry of Transportation</span>
+    <img src="kano-logo.jfif" alt="Professor" class="circular-img fixed-right-img">
+</nav>
+
+<!-- First Navbar -->
+<nav class="navbar navbar-light bg-white text-dark fixed-top first-navbar">
+    <img src="kano-logo.jfif" alt="Education Cap" class="circular-img fixed-left-img">
+    <span class="navbar-brand-name text-danger">Kano Ministry of Transportation</span>
+    <img src="kano-logo.jfif" alt="Professor" class="circular-img fixed-right-img">
+</nav>
+
+<!-- Second Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark text-white second-navbar" style="margin-top: 60px; padding-bottom: 10px;">
+    <div class="navbar-toggler" type="button" onclick="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+    </div>
+    <button class="cancel-btn" style="display:none;" onclick="toggleNavbar()">×</button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-danger" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-danger" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-danger" href="#services.html">Services</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Spacer to Separate Navbar from Contact Us -->
+<div style="height: 40px;"></div>
+
+<!-- Contact Us Header -->
+<header class="text-white text-center py-4" style="background: linear-gradient(to right, #dc3545, #358b49, #dc3545);">
+    <h1>Contact Us</h1>
+</header>
+
     <!-- Main Content -->
-    <div class="contact-container my-4">
+    <div class="contact-container my-5">
         <div class="row">
             <!-- Map and Address Section -->
-            <div class="col-lg-6 text-center" id="contact-address">
-                <h2 class="text-light bg-dark">Our Location</h2>
+            <div class="col-lg-6 text-center" id="contact-address" >
+                <h2 class="text-light bg-dark" style="background: linear-gradient(to right, #dc3545, #358b49, #dc3545);">Our Location</h2>
                 <p class="small mb-0">Ministry of Transportation, Kano State</p>
                 <p class="small mb-0">No. 340, Goron Dutse, Aminu Kano Way</p>
                  <p> Kano, Nigeria</p>
@@ -67,21 +73,21 @@
                       </p>
 
                <!-- Map Embed -->
-<div class="map-container">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.1266537127966!2d8.5154532!3d11.9735703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae803664c020e1%3A0x3a434129be5a200d!2sRoyal%20Plaza%20Zoo%20Road!5e0!3m2!1sen!2sng!4v1698755432123"
-        width="100%" 
-        height="100%" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
+               <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.123456789012!2d8.4897746!3d11.9948298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae811ce88ac643%3A0x1a706c817a077ccd!2sKano%20Ministry%20of%20Transport%20and%20Tourism!5e0!3m2!1sen!2sng!4v1698755432123"
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
+                      </div>
      <!-- Contact Form Section -->
-<div class="col-lg-6">
-    <h2 class="text-white text-center bg-dark">Get in Touch</h2>
+<div class="col-lg-6 get-in">
+    <h2 class="text-white text-center bg-dark" style="background: linear-gradient(to right, #dc3545, #358b49, #dc3545);">Get in Touch</h2>
     <form id="contactForm" method="POST" action="/send-message">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
@@ -100,115 +106,163 @@
             <button type="submit" class="btn btn-success">Submit</button>
         </div>
     </form>
-</div>
-
-   <!-- Donate Container (Centered) -->
-<div class="container d-flex justify-content-center mt-4" >
-    <div class="col-lg-6 col-md-8 col-sm-10 text-center" id="donate" >
-        <h2 class="text-white text-center bg-dark py-1">Donate</h2>
-        <p>Your generous donations help us support orphans, widows, divorced women, and underprivileged youth in our community. Please consider making a contribution to help us continue our mission.</p>
-        <div>
-            <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#donateModal">Donate Now</a>
-        </div>
-    </div>
-</div>
-
-<!-- Donation Modal -->
-<div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="donateModalLabel">Make a Donation</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="donationForm">
-                    <div class="mb-3">
-                        <label for="donorName" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="donorName" name="donorName" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="donorEmail" class="form-label">Email (Optional)</label>
-                        <input type="email" class="form-control" id="donorEmail" name="donorEmail">
-                    </div>
-                    <div class="mb-3">
-                        <label for="donorPhone" class="form-label">Phone Number (Optional)</label>
-                        <input type="text" class="form-control" id="donorPhone" name="donorPhone">
-                    </div>
-                    <div class="mb-3">
-                        <label for="amount" class="form-label">Amount (NGN)</label>
-                        <input type="number" class="form-control" id="amount" name="amount" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="country" class="form-label">Country</label>
-                        <input type="text" class="form-control" id="country" name="country" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="state" class="form-label">State</label>
-                        <input type="text" class="form-control" id="state" name="state" required>
-                    </div>
-                    <div class="text-center">
-                        <button  type="button" class="btn btn-success" onclick="initiatePayment()">Donate</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 </div></div>
-  <!-- Footer -->
-<footer class="footer bg-light text-dark mt-5 py-3">
+<!-- Footer -->
+<footer class="footer text-white mt-3 py-3">
     <div class="container">
         <div class="text-center mb-2">
-            <h6 class="mb-1">Ready to Make a Difference?</h6>
-            <p class="small mb-2">Join us in transforming lives and empowering communities. Get involved or support our mission today!</p>
+            <h6 class="mb-1">Committed to Safe and Efficient Transportation</h6>
+            <p class="small mb-2">Building a modern transport system for the people of Kano State.</p>
+        </div>
+
+        <!-- Grid system to ensure four columns per row -->
+        <div class="row text-center">
+            <div class="col-12 col-md-3 mb-3 mb-md-0">
+                <h6 class="mb-1">Contact Us</h6>
+                <p class="small mb-0">Ministry of Transportation, Kano State</p>
+                <p class="small mb-0">No. 340, Goron Dutse, Aminu Kano Way, Kano, Nigeria</p>
+            </div>
+            <div class="col-12 col-md-3 mb-3 mb-md-0">
+                <h6 class="mb-1">Call Us</h6>
+                <p>
+                    <i class="fas fa-phone"></i> 
+                    <a href="tel:+234 8032079753">+234 8032079753</a>
+                  </p>
+            </div>
+            <div class="col-12 col-md-3 mb-3 mb-md-0">
+                <h6 class="mb-1">Email Us</h6>
+                <p>
+                    <i class="fas fa-envelope"></i> 
+                    <a href="mailto:info@sekurefoundation.com.ng">info@transportation.kano.gov.ng</a>
+                  </p>
+            </div>
+            <div class="col-12 col-md-3">
+                <h6 class="mb-1">Quick Links</h6>
+                <ul class="list-unstyled small mb-0">
+                    <li><a href="index.html" class="quick-link">Home</a></li>
+                    <li><a href="services.html" class="quick-link">Services</a></li>
+                    <li><a href="about.html" class="quick-link">About</a></li>
+                    <li><a href="projects.html" class="quick-link">Projects</a></li>
+                    <li><a href="contact.html" class="quick-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-3">
+            <p class="small mb-0">&copy; 2025 Kano State Ministry of Transportation. All rights reserved.</p>
         </div>
     </div>
-        <div class="row text-center">
-            <div class="col-6">
-                <h6 class="mb-1">Call Us</h6>
-                <p class="small mb-0">08064228515</p>
-                <p class="small mb-0">08030909793</p>
-            </div>
-            <div class="col-6">
-                <h6 class="mb-1">Email Us</h6>
-                <p class="small mb-0">info@sekurefoundation.com.ng</p>
-            </div>
-        </div>
+</footer>
 
-        <div class="text-center mb-2">
-            <h6 class="mb-1">Visit Us</h6>
-            <p class="small mb-0">Sekure Foundation</p>
-            <p class="small mb-0">Dan Pass Royal Plaza Zoo Road, Kano, Kano State, Nigeria</p>
-        </div>
+    <!-- Back to top button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
-        <div class="social-icons text-center mt-2">
-            <a href="https://www.facebook.com" target="_blank" class="text-white me-2" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.twitter.com" target="_blank" class="text-white me-2" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank" class="text-white me-2" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" class="text-white" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </div>
+    <script>
+        function toggleNavbar() {
+  const navbarNav = document.getElementById("navbarNav");
+  const cancelButton = document.querySelector(".cancel-btn");
+  const menuIcon = document.querySelector(".navbar-toggler-icon"); // Select the menu icon
 
-        <div class="text-center mt-2">
-            <p class="small mb-0">&copy; Sekure Foundation. All rights reserved.</p>
-        </div>
-        
-<!-- Back to top button -->
-<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+  if (navbarNav.classList.contains("show")) {
+    // If navbar is open, close it
+    navbarNav.classList.remove("show");
+    cancelButton.style.display = "none"; // Hide cancel button
+    menuIcon.classList.remove("hidden"); // Show menu icon
+  } else {
+    // If navbar is closed, open it
+    navbarNav.classList.add("show");
+    cancelButton.style.display = "block"; // Show cancel button
+    menuIcon.classList.add("hidden"); // Hide menu icon completely
+  }
+}
 
+document.addEventListener('DOMContentLoaded', () => {
+  const dropdownToggle = document.querySelector('#loginDropdown'); // ID of the main dropdown toggle
+  const dropdownMenu = document.querySelector('.dropdown-menu[aria-labelledby="loginDropdown"]'); // Menu linked to the toggle
+  const dropdownItems = dropdownMenu.querySelectorAll('a.dropdown-item'); // Items inside the dropdown menu
 
-<!-- Bootstrap JS -->
+  // Show dropdown on hover over the toggle
+  dropdownToggle.addEventListener('mouseover', () => {
+    dropdownMenu.classList.add('show');
+  });
+
+  // Keep the dropdown visible when hovering over the menu itself
+  dropdownMenu.addEventListener('mouseover', () => {
+    dropdownMenu.classList.add('show');
+  });
+
+  // Hide dropdown when mouse leaves both toggle and menu
+  dropdownToggle.addEventListener('mouseout', () => {
+    dropdownMenu.classList.remove('show');
+  });
+
+  dropdownMenu.addEventListener('mouseout', () => {
+    dropdownMenu.classList.remove('show');
+  });
+
+  // Navigate to the correct page and collapse the navbar when an item is clicked
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', (event) => {
+      const targetPage = item.getAttribute('href'); // Get the target URL
+      if (targetPage) {
+        const navbarNav = document.getElementById("navbarNav");
+        navbarNav.classList.remove('show'); // Close the navbar
+        window.location.href = targetPage; // Navigate to the target page
+      }
+    });
+  });
+
+  // Hide dropdown if clicked anywhere outside the button or menu
+  document.addEventListener('click', (event) => {
+    if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+      dropdownMenu.classList.remove('show');
+    }
+  });
+});
+        // Scroll to top function
+        let mybutton = document.getElementById("myBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+    const newsItems = document.querySelectorAll(".news-item");
+    let currentIndex = 0;
+
+    function showNextNews() {
+        // Remove 'active' class from all
+        newsItems.forEach(item => item.classList.remove("active"));
+
+        // Show the current news
+        newsItems[currentIndex].classList.add("active");
+
+        // Move to next index (loop back if at end)
+        currentIndex = (currentIndex + 1) % newsItems.length;
+    }
+
+    // Initially show the first news item
+    showNextNews();
+
+    // Rotate news items every 5 seconds
+    setInterval(showNextNews, 5000);
+});
+    </script>
+
+    <!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-<script src="index.js"></script>
 </body>
 </html>
