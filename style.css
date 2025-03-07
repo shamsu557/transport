@@ -1,339 +1,722 @@
-/* Navbar /* Navbar Styles */
-.navbar {
-    position: fixed; /* Makes the navbar fixed */
-    top: 0;          /* Positions the navbar at the top */
-    left: 0;
-    right: 0;
-    z-index: 1030;   /* Ensures it stays on top of other elements */
-    background-color: #212529; /* Ensure consistent background */
-}Styles */
 
-
-.navbar-brand {
-    color: #f8f9fa;
-    font-weight: bold;
+body {
+    background-color: #f8f9fa;
+    color: #212529;
 }
-
-.navbar-brand:hover {
-    color: #ffffff; /* Keep white on hover */
-}
-
-.nav-link {
-    color: #0b0b0c !important;
-    font-size: 16px;
-}
-
-.nav-link:hover {
-    color: #d7cfcf !important; /* Dark text color */
-    background-color: #fffefe; /* Light background color */
-}
-
-.navbar-toggler {
-    display: block;
-    background-color: white !important;
-    border: none;
-    position: absolute;
-    top: 10px;
-    right: 10px; /* Proper alignment */
-    z-index: 1031;
-}
-
-.navbar-toggler-icon {
-    width: 30px;
-    height: 3px;
-    background-color: black !important;
-    border-radius: 1px;
+.hero {
     position: relative;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-    content: '';
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    position: absolute;
-    left: 0;
-    border-radius: 1px;
-}
-
-.navbar-toggler-icon::before {
-    top: -8px; /* Space above middle line */
-}
-
-.navbar-toggler-icon::after {
-    top: 8px; /* Space below middle line */
-}
-.navbar-cancel {
-    display: none;
-    background:white;
-    border: none;
-    font-size: 1.5rem;
-    color: black;
-}
-
-/* Show dropdown on hover for large screens */
-@media (min-width: 992px) {
-    .navbar .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-    .navbar .dropdown-menu {
-        margin-top: 0;
-    }
-}
-
-/* Ensure dropdown is visible on hover for small screens */
-@media (max-width: 991px) {
-    .navbar .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-    .navbar .dropdown-menu {
-        margin-top: 0;
-    }
-}
-
-/* Ensure dropdown is visible when hovered on mobile screens */
-@media (max-width: 768px) {
-    .navbar .dropdown:hover .dropdown-menu {
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        background-color: white; /* Ensure dropdown is visible */
-        z-index: 1000;
-    }
-
-    .navbar .dropdown-menu {
-        margin-top: 0;
-        width: 100%; /* Full width */
-        text-align: center; /* Center dropdown items */
-    }
-
-    .nav-link {
-        display: block;
-        text-align: center;
-        padding: 10px;
-        font-size: 1rem;
-    }
-
-    /* Hide caret from dropdown */
-    .navbar .dropdown-toggle::after {
-        display: none;
-    }
-
-    .navbar-cancel {
-        display: none;
-    }
-
-    /* Center the "Donate" button */
-    .navbar-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .navbar-nav .nav-item {
-        width: 100%;
-        text-align: center;
-    }
-
-    .navbar-nav .btn.btn-success {
-        margin-top: 10px;
-    }
-}
-.navbar-logo {
-    height: 50px; /* Adjust for ideal size */
-    width: 50px; /* Ensures it is round */
-    border-radius: 50%; /* Makes it circular */
-    object-fit: cover; /* Ensures proper cropping inside the round shape */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for a fantastic look */
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.navbar-logo:hover {
-    transform: scale(1.1); /* Slightly enlarges on hover */
-    opacity: 0.9;
-}
-
-.navbar-brand-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-left: 20px;
-    text-transform: uppercase;
-    font-family: 'Caveat', cursive; /* Using the Caveat font for handwritten style */
-    font-style: italic; /* Optional: if you still want the italic style */
-}
-
-
-/* Hero Section Styles */
-.hero-section {
-    position: relative;
+    height: 75vh;
     width: 100%;
-    height: 70vh; /* Proper height for large screens */
-    display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: flex-start; /* Align content to the left */
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+    margin-bottom: 20px;
 }
 
-.hero-section img {
+.carousel-item {
+    height: 80vh;
+}
+.carousel-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Maintain aspect ratio without cutting */
+    height: 75vh;
+    object-fit: cover;
 }
-
-/* Default caption behavior */
 .carousel-caption {
     position: absolute;
-    top: 0; /* Position at the top */
-    left: 0; /* Start from the left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark background for readability */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:75vh;
+    background: rgba(98, 76, 76, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
-    display: flex; /* Flexbox for centering */
-    flex-direction: column; /* Arrange text vertically */
-    justify-content: center; /* Center text vertically */
-    align-items: center; /* Center text horizontally */
-    text-align: center; /* Center the text */
-    box-sizing: border-box;
 }
-
-/* Headings and Paragraph styles inside the caption */
-.carousel-caption h5 {
-    font-size: 1.5rem; /* Prominent text size */
-    font-weight: 900; /* Very bold */
-    margin: 0;
-}
-
-.carousel-caption p {
-    font-size: 1rem; /* Slightly smaller than h2 */
-    font-weight: 700; /* Bold text */
-    margin: 10px 0 0; /* Spacing below heading */
-}
-/* Ensure images are centered but not cropped from the top */
-img.rounded-circle {
-    width: 150px;  /* Set a fixed width for all images */
-    height: 150px;  /* Set a fixed height for all images */
-    object-fit: cover;  /* Ensure the images are cropped to fill the circle */
-    object-position: top;  /* Align the top of the image with the circle's top edge */
-    margin-bottom: 10px;  /* Add space below images */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 991px) {
-    .hero-section {
-        height: 70vh;
-    }
-
-    .carousel-caption {
-        padding: 20px;
-        background-color: rgba(0, 0, 0, 0.5); /* Reduced opacity to make image clearer */
-    }
-
-    .carousel-caption h2 {
-        font-size: 2.5rem;
-    }
-
-    .carousel-caption p {
-        font-size: 1.25rem;
-    }
-}
-
 @media (max-width: 768px) {
-    .hero-section {
-        height: 60vh;
-    }
-    .mt-mobile {
-        margin-top: 10px;
-    }
-    .carousel-caption {
-        padding: 15px;
-        background-color: rgba(0, 0, 0, 0.4); /* Even lower opacity for better image visibility */
-    }
-
-    .carousel-caption h2 {
-        font-size: 2rem;
-    }
-
-    .carousel-caption p {
-        font-size: 1rem;
+    .carousel-item {
+        height: 68vh;
     }
 }
+.hero {
+position: relative;
+height: 75vh;
+width: 100%;
+margin-bottom: 15px;
+}
 
+.carousel-item {
+height: 100vh;
+}
+
+.carousel-item img {
+width: 100%;
+height: 75vh;
+object-fit: cover;
+}
+
+.carousel-caption {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 75vh;
+background: rgba(98, 76, 76, 0.6);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: white;
+}
+
+/* Medium screens (tablets and smaller desktops) */
+@media (max-width: 992px) {
+.hero {
+height: 70vh;
+margin-bottom: 10px;
+}
+
+.carousel-item {
+height: 90vh; /* Adjust height for tablets */
+}
+
+.carousel-item img {
+height: 70vh;
+}
+
+.carousel-caption {
+height: 70vh;
+}
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+.hero {
+height: 55vh;
+margin-bottom: 8px;
+}
+
+.carousel-item {
+height: 75vh; /* Reduce height for mobile screens */
+}
+
+.carousel-item img {
+height: 55vh;
+}
+
+.carousel-caption {
+height: 55vh;
+}
+}
+
+/* Extra small screens (very small mobile devices) */
+@media (max-width: 480px) {
+.hero {
+height: 45vh;
+margin-bottom: 5px;
+}
+
+.carousel-item {
+height: 65vh; /* Reduce height further for very small screens */
+}
+
+.carousel-item img {
+height: 45vh;
+}
+
+.carousel-caption {
+height: 45vh;
+}
+}
+
+
+.quick-links a {
+    text-decoration: none;
+    color: white;
+    background: #dc3545;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+}
+.header-logos {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    background: white;
+}
+.header-logos img {
+    height: 80px;
+    margin: 0 15px;
+}
+
+/* First Navbar - Contains images and text */
+.first-navbar {
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1030; /* Ensures it stays above other content */
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 10px;
+background-color: rgba(248, 249, 250, 0.95); /* Semi-transparent background */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds slight shadow */
+}
+
+/* Second Navbar - Contains menu items */
+.second-navbar {
+position: fixed;
+top: 60px; /* Positioned right below the first navbar */
+width: 100%;
+z-index: 1029; /* Slightly lower than the first navbar */
+display: flex;
+padding: 14px 10px;
+background: linear-gradient(to right, #dc3545, #358b49, #dc3545);
+height: 40px; /* Adjust height dynamically */
+}
+
+/* Navbar items styling */
+.second-navbar .navbar-nav .nav-item {
+margin-right: 20px;
+}
+
+.second-navbar .navbar-nav .nav-item:last-child {
+margin-right: 0;
+}
+
+/* Center align menu toggler on mobile */
+.navbar-toggler {
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+}
+
+/* Menu link styles */
+.navbar-nav .nav-item .nav-link {
+color: #f6f6f7 !important;
+line-height: 1.8;
+transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for link */
+.navbar-nav .nav-item .nav-link:hover {
+color: #e4e8ec !important;
+background-color: #dc3545 !important;
+}
+
+/* Hover effect for Quick Access links */
+.service-list li a {
+transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.service-list li a:hover {
+color: #df1717 !important;
+text-decoration: underline;
+font-weight: bold;
+}
+/* Mobile View - Show Background for Menu */
+@media (max-width: 992px) {
+.navbar-collapse {
+background: linear-gradient(to right, #dc3545, #358b49, #dc3545);
+padding: 20px 10px;
+border-radius: 5px;
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+z-index: 999;
+}
+
+/* Ensure text remains visible */
+.navbar-nav .nav-item .nav-link {
+color: white !important;
+}
+
+/* Navbar Toggler Icon */
+.navbar-toggler-icon {
+filter: invert(1);
+}
+
+/* Center navbar items in mobile view */
+.second-navbar {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+flex-direction: column;
+}
+
+.second-navbar .navbar-nav {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+}
+
+.second-navbar .navbar-nav .nav-item {
+margin-right: 0;
+margin-bottom: 10px;
+}
+}
+
+/* Remove caret space entirely */
+.nav-item .dropdown-toggle::after {
+display: none;
+}
+
+/* Adjust padding for dropdown */
+.nav-item .dropdown-toggle {
+padding-right: 0;
+}
+
+/* Large screen styles */
+@media (min-width: 992px) {
+.navbar-collapse {
+justify-content: center;
+}
+
+/* Hide the toggler on large screens */
+.navbar-toggler {
+display: none;
+}
+}
+
+/* Cancel button styles - Now visible */
+.cancel-btn {
+display: none;
+background: #358b49;
+border: none;
+font-size: 1.5rem;
+color: white;
+position: absolute;
+top: 10px;
+right: 10px;
+z-index: 1000; /* Ensures it's above everything */
+cursor: pointer;
+padding: 5px 10px;
+border-radius: 5px;
+}
+
+/* Show the cancel button in mobile view */
+@media (max-width: 992px) {
+.cancel-btn {
+display: block;
+}
+}
+
+/* Hide the menu icon when navbar is open */
+.navbar-toggler-icon.hidden {
+display: none;
+}
 @media (max-width: 576px) {
-    .hero-section {
-        height: 50vh;
-    }
+.navbar-collapse {
+display: flex;
+flex-direction: column;
+align-items: center; /* Centers items horizontally */
+text-align: center; /* Ensures text is centered */
+}
 
-    .carousel-caption {
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.3); /* Very light background, making image more visible */
-    }
+.navbar-nav {
+width: 100%; /* Ensures full width for centering */
+}
 
-    .carousel-caption h2 {
-        font-size: 1.75rem;
-    }
+.navbar-nav .nav-item {
+width: 100%; /* Makes each item take full width */
+}
 
-    .carousel-caption p {
-        font-size: 0.9rem;
-    }
+.navbar-nav .nav-link {
+display: block;
+padding: 10px 0;
+}
+.navbar-toggler {
+left: 50%;
+transform: translateX(250%);
+}
+
+}
+/* Fixed Circular Images */
+.fixed-image, .circular-img {
+width: 65px;
+height: 60px;
+object-fit: contain;
+border-radius: 50%;
+} 
+/* Footer adjustments */
+.footer {
+padding: 8px;
+font-size: 14px;
+}
+
+.footer .row {
+flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.footer i {
+font-size: 20px;
+}
+
+/* Ensure four columns on large screens */
+@media (min-width: 768px) {
+.footer .row > div {
+flex: 1;
+min-width: 25%;
+}
+}
+
+/* Quick Links styling */
+.quick-link {
+color: white;
+text-decoration: none;
+transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for Quick Links */
+.quick-link:hover {
+color: #dc3545 !important; /* Bootstrap danger color */
+}
+
+/* Button styles */
+button {
+padding: 8px 12px;
+font-size: 14px;
+}
+
+#myBtn {
+bottom: 10px;
+right: 10px;
+padding: 10px;
+font-size: 14px;
+}
+
+/* Larger screen styles */
+@media (min-width: 992px) {
+.navbar-collapse {
+justify-content: end;
+}
+
+/* Hide navbar toggler on large screens */
+.navbar-toggler {
+display: none;
+}
+}
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.leader-image {
+width: 250px; /* Ensure a fixed width */
+height: 250px; /* Make height equal to width */
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+border-radius: 50%; /* Makes it circular */
+margin: 0 auto; /* Centers the images */
+}
+
+.leader-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+@keyframes slideDown {
+from {
+transform: translateY(-50px);
+opacity: 0;
+}
+to {
+transform: translateY(0);
+opacity: 1;
+}
+}
+.slide-in {
+opacity: 0;
+transform: translateY(-50px);
+animation: slideDown 1s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+from {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+.footer {
+background: linear-gradient(to right, #dc3545, #358b49, #dc3545);
 }
 #myBtn {
-    display: none;
-    position: fixed;
-    bottom: 15px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background: linear-gradient(45deg, #54585a, #202223);
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
-    }
-    
-    #myBtn:hover {
-    background-color: #636a6b;
-    }
-    .login-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      .login-box {
-        background-color: white;
-        padding: 40px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        max-width: 400px;
-        width: 100%;
-      }
-      .login-title {
-        font-size: 28px;
-        text-align: center;
-        margin-bottom: 20px;
-      }
+position: fixed;
+bottom: 20px;
+right: 20px;
+display: none;
+background-color: #fff;
+color: #dc3545;
+border: none;
+padding: 10px 15px;
+border-radius: 50%;
+cursor: pointer;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+#myBtn:hover {
+background-color: #ddd;
+}
+/* News container styling */
+.news-container {
+position: relative;
+width: 80%;
+max-width: 900px;
+height: 450px;
+margin: auto;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
 
-      .login-box img {
-        max-width: 80px;
-        display: block;
-        margin: 0 auto 20px;
-      }
-      .form-label {
-        font-weight: bold;
-      }
-      .btn-login {
-        width: 100%;
-        padding: 10px;
-      }
-      .alert {
-        display: none;
-      }
+/* Individual news items */
+.news-item {
+position: absolute;
+width: 100%;
+height: 100%;
+opacity: 0;
+transform: translateY(-100%);
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+transition: opacity 1s ease, transform 1s ease;
+}
+
+/* News images - Ensures full coverage */
+.news-item img {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover; /* Ensures image fully covers the container */
+z-index: -2; /* Moves image behind the overlay */
+}
+
+/* Full-screen opacity overlay + text container */
+.news-caption {
+position: absolute;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.6); /* Dark overlay covering entire image */
+color: white;
+display: flex;
+flex-direction: column;
+justify-content: center; /* Centers text vertically */
+align-items: center; /* Centers text horizontally */
+text-align: center;
+padding: 20px;
+z-index: 1;
+}
+
+/* Active news item */
+.news-item.active {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Overlay Container */
+.overlay-container {
+position: relative;
+}
+
+/* Background Image */
+.overlay-image {
+height: 100%;
+object-fit: cover;
+filter: brightness(50%);
+}
+
+/* Overlay Content */
+.overlay-content {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 90%;
+text-align: center;
+background: rgba(0, 0, 0, 0.6);
+padding: 20px;
+border-radius: 8px;
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+
+/* Medium screens (tablets and small desktops) */
+@media (max-width: 992px) {
+.news-container {
+width: 90%;
+height: 400px; /* Reduced height */
+}
+
+.news-caption {
+padding: 15px;
+}
+
+.overlay-content {
+width: 80%;
+padding: 15px;
+}
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+.news-container {
+width: 100%;
+height: 350px; /* Further reduced height */
+}
+
+.news-caption {
+font-size: 14px;
+padding: 10px;
+}
+
+.overlay-content {
+width: 85%;
+padding: 12px;
+}
+}
+
+/* Extra small screens (very small mobile devices) */
+@media (max-width: 480px) {
+.news-container {
+height: 250px; /* Minimum height for small devices */
+}
+
+.news-caption {
+font-size: 12px;
+padding: 8px;
+}
+
+.overlay-content {
+width: 90%;
+padding: 10px;
+}
+}
+
+
+
+/* Hero Container */
+.hero-container {
+position: relative;
+width: 100%;
+height: 100%; /* Default height */
+background: url('kano infrastructure.jpg') no-repeat center center/cover;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+border-radius: 10px; /* Optional: Adds rounded edges */
+}
+
+/* Overlay Content */
+.overlay-content {
+background: rgba(253, 253, 253, 0.6); /* Dark overlay covering entire image */
+padding: 20px;
+border-radius: 8px;
+text-align: center;
+max-width: 80%;
+}
+
+/* Text Styling */
+.overlay-content h2,
+.overlay-content p {
+color: white;
+margin-bottom: 10px;
+}
+
+/* Medium screens (tablets and smaller desktops) */
+@media (max-width: 992px) {
+.hero-container {
+height: 75vh; /* Reduced height for tablets */
+}
+
+.overlay-content {
+padding: 15px;
+max-width: 85%;
+}
+
+.overlay-content h2 {
+font-size: 1.8rem;
+}
+
+.overlay-content p {
+font-size: 1rem;
+}
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+.hero-container {
+height: 55vh; /* Further reduced height */
+}
+
+.overlay-content {
+padding: 12px;
+max-width: 90%;
+}
+
+.overlay-content h2 {
+font-size: 1.5rem;
+}
+
+.overlay-content p {
+font-size: 0.9rem;
+}
+}
+
+/* Extra small screens (very small mobile devices) */
+@media (max-width: 480px) {
+.hero-container {
+height: 45vh; /* Minimized height for smaller devices */
+}
+
+.overlay-content {
+padding: 10px;
+max-width: 95%;
+}
+
+.overlay-content h2 {
+font-size: 1.2rem;
+}
+
+.overlay-content p {
+font-size: 0.8rem;
+}
+}
+
+/* List Styling */
+.service-list {
+list-style: none;
+padding: 0;
+}
+
+.service-list li {
+margin: 10px 0;
+}
+
+.service-list a {
+color: white;
+font-weight: bold;
+text-decoration: none;
+transition: 0.3s;
+}
+
+.service-list a:hover {
+text-decoration: underline;
+}
+
+
+.card-img-top {
+height: 290px; /* Fixed height for uniformity */
+object-fit: cover; /* Ensures images fill the space without distortion */
+width: 100%; /* Makes sure images stretch to fit the card width */
+}
