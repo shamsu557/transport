@@ -1,48 +1,41 @@
-function toggleNavbar() {
-    const navbarNav = document.getElementById("navbarNav");
-    const cancelButton = document.querySelector(".cancel-btn");
-    const menuIcon = document.querySelector(".navbar-toggler-icon");
-
-    if (navbarNav.classList.contains("show")) {
-        navbarNav.classList.remove("show"); // Collapse menu
-        cancelButton.style.display = "none"; // Hide cancel button
-        menuIcon.style.display = "block"; // Show menu icon
-    } else {
-        navbarNav.classList.add("show"); // Open menu
-        cancelButton.style.display = "block"; // Show cancel button
-        menuIcon.style.display = "none"; // Hide menu icon
-    }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    const dropdownToggle = document.querySelector('#loginDropdown');
-    const dropdownMenu = document.querySelector('.dropdown-menu[aria-labelledby="loginDropdown"]');
-    const dropdownItems = dropdownMenu.querySelectorAll('a.dropdown-item');
-    const navLinks = document.querySelectorAll(".nav-link"); // Select all nav links
     const navbarNav = document.getElementById("navbarNav");
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const cancelButton = document.querySelector(".cancel-btn");
 
-    // Show dropdown on hover
-    dropdownToggle.addEventListener('mouseover', () => dropdownMenu.classList.add('show'));
-    dropdownMenu.addEventListener('mouseover', () => dropdownMenu.classList.add('show'));
+    function toggleNavbar() {
+        if (navbarNav.classList.contains("show")) {
+            navbarNav.classList.remove("show");
+            cancelButton.style.display = "none";
+            navbarToggler.style.display = "block";
+        } else {
+            navbarNav.classList.add("show");
+            cancelButton.style.display = "block";
+            navbarToggler.style.display = "none";
+        }
+    }
 
-    // Hide dropdown when mouse leaves
-    dropdownToggle.addEventListener('mouseout', () => dropdownMenu.classList.remove('show'));
-    dropdownMenu.addEventListener('mouseout', () => dropdownMenu.classList.remove('show'));
+    navbarToggler.addEventListener("click", toggleNavbar);
+    cancelButton.addEventListener("click", toggleNavbar);
 
-    // Collapse menu when any nav link (or dropdown item) is clicked
-    [...navLinks, ...dropdownItems].forEach(item => {
-        item.addEventListener('click', () => {
-            navbarNav.classList.remove("show"); // Collapse the menu
+    document.querySelectorAll(".nav-link").forEach(link => {
+        link.addEventListener("click", () => {
+            if (navbarNav.classList.contains("show")) {
+                toggleNavbar();
+            }
         });
     });
 
-    // Hide dropdown when clicking outside
-    document.addEventListener('click', (event) => {
-        if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.remove('show');
+    // Hide navbar when clicking outside
+    document.addEventListener("click", (event) => {
+        if (!navbarNav.contains(event.target) && !navbarToggler.contains(event.target) && !cancelButton.contains(event.target)) {
+            navbarNav.classList.remove("show");
+            cancelButton.style.display = "none";
+            navbarToggler.style.display = "block";
         }
     });
 });
+
 
     // Scroll to top function
     let mybutton = document.getElementById("myBtn");
