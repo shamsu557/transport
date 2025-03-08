@@ -336,8 +336,8 @@ transform: translateX(250%);
 }
 /* Fixed Circular Images */
 .fixed-image, .circular-img {
-width: 65px;
-height: 60px;
+width: 105px;
+height: 83px;
 object-fit: contain;
 border-radius: 50%;
 } 
