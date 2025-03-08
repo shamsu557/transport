@@ -332,8 +332,8 @@ transform: translateX(250%);
 
 }
 .fixed-image, .circular-img {
-    width: 83px; /* Keep consistent height and width */
-    height: 83px;
+    width: 65px; /* Keep consistent height and width */
+    height: 65px;
     object-fit: cover; /* Ensures the image fully covers the circular area */
     border-radius: 50%;
 }
@@ -724,7 +724,7 @@ width: 100%; /* Makes sure images stretch to fit the card width */
     object-fit: cover; /* Ensures the image fills the area */
 }
 .navbar-brand-name {
-    margin-left: 2px; /* Reduce spacing between the image and text */
+    margin-left: 0; /* Reduce spacing between the image and text */
     font-weight: bold;
     white-space: nowrap;
 }
