@@ -149,20 +149,17 @@ height: 45vh;
     margin: 0 15px;
 }
 
-/* First Navbar - Contains images and text */
 .first-navbar {
-position: fixed;
-top: 0;
-width: 100%;
-z-index: 1030; /* Ensures it stays above other content */
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 0 10px;
-background-color: rgba(248, 249, 250, 0.95); /* Semi-transparent background */
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds slight shadow */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    background-color: rgba(248, 249, 250, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 /* Second Navbar - Contains menu items */
 .second-navbar {
 position: fixed;
@@ -334,13 +331,13 @@ transform: translateX(250%);
 }
 
 }
-/* Fixed Circular Images */
 .fixed-image, .circular-img {
-width: 105px;
-height: 83px;
-object-fit: contain;
-border-radius: 50%;
-} 
+    width: 83px; /* Keep consistent height and width */
+    height: 83px;
+    object-fit: cover; /* Ensures the image fully covers the circular area */
+    border-radius: 50%;
+}
+
 /* Footer adjustments */
 .footer {
 padding: 8px;
@@ -727,8 +724,7 @@ width: 100%; /* Makes sure images stretch to fit the card width */
     object-fit: cover; /* Ensures the image fills the area */
 }
 .navbar-brand-name {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: flex-start;
+    margin-left: 2px; /* Reduce spacing between the image and text */
+    font-weight: bold;
+    white-space: nowrap;
 }
