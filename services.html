@@ -9,62 +9,74 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Kano Ministry of Transportation</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+   <!-- First Navbar -->
+<nav class="navbar navbar-light bg-white text-dark fixed-top first-navbar">
+    <img src="kano-logo.jfif" alt="Education Cap" class="circular-img fixed-left-img">
+    <span class="navbar-brand-name text-danger">Kano Ministry of Transportation</span>
+    <img src="kano-logo.jfif" alt="Professor" class="circular-img fixed-right-img">
+  </nav>
+  
+  <!-- Second Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark text-white second-navbar">
+    <div class="navbar-toggler" type="button" onclick="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+    </div>
+    <button class="cancel-btn" style="display:none;" onclick="toggleNavbar()">×</button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-danger" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-danger" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-danger" href="contact.html">Contact</a></li>
+            </li>
+        </ul>
+    </div>
+  </nav>
+    <br><br><br>
+<!-- Services Section -->
+<section class="container my-5 text-center">
+    <h2 class="text-danger">Our Services</h2>
+    <p>Providing efficient, safe, and modern transportation solutions across Kano State.</p>
     
-    <!-- Services Section -->
-    <section class="container my-5">
-        <h2 class="text-center text-danger">Our Services</h2>
-        <p class="text-center">Providing efficient, safe, and modern transportation solutions across Kano State.</p>
-        
-        <div class="row">
-            <div class="col-md-6">
-                <h4 class="text-dark">Road Infrastructure Development</h4>
-                <p>We construct, rehabilitate, and maintain roads and highways to enhance mobility.</p>
-            </div>
-            <div class="col-md-6">
-                <h4 class="text-dark">Public Transport Management</h4>
-                <p>Regulation and coordination of public transport services, including bus systems and tricycles.</p>
-            </div>
-            <div class="col-md-6">
-                <h4 class="text-dark">Traffic Management & Road Safety</h4>
-                <p>Implementation of traffic rules through KAROTA and promotion of road safety awareness campaigns.</p>
-            </div>
-            <div class="col-md-6">
-                <h4 class="text-dark">Vehicle Inspection & Licensing</h4>
-                <p>Inspection and certification of vehicles for roadworthiness through VIO services.</p>
-            </div>
-            <div class="col-md-6">
-                <h4 class="text-dark">Water Transport Services</h4>
-                <p>Development and regulation of inland waterways to enhance connectivity.</p>
-            </div>
-            <div class="col-md-6">
-                <h4 class="text-dark">Emergency Transport Services</h4>
-                <p>Quick response to road accidents in collaboration with health and security agencies.</p>
-            </div>
+    <div class="row justify-content-center text-center">
+        <div class="col-md-6 my-3">
+            <img src="infrastructure.jfif" class="service-img img-fluid rounded mb-3 mx-auto d-block" alt="Road Infrastructure">
+            <h4 class="text-dark">Road Infrastructure Development</h4>
+            <p>We construct, rehabilitate, and maintain roads and highways to enhance mobility.</p>
         </div>
-    </section>
+        <div class="col-md-6 my-3">
+            <img src="ptransport.jfif" class="service-img img-fluid rounded mb-3 mx-auto d-block" alt="Public Transport">
+            <h4 class="text-dark">Public Transport Management</h4>
+            <p>Regulation and coordination of public transport services, including bus systems and tricycles.</p>
+        </div>
+        <div class="col-md-6 my-3">
+            <img src="trafic.jfif" class="service-img img-fluid rounded mb-3 mx-auto d-block" alt="Traffic Management">
+            <h4 class="text-dark">Traffic Management & Road Safety</h4>
+            <p>Implementation of traffic rules through KAROTA and promotion of road safety awareness campaigns.</p>
+        </div>
+        <div class="col-md-6 my-3">
+            <img src="vio.jfif" class="service-img img-fluid rounded mb-3 mx-auto d-block" alt="Vehicle Inspection">
+            <h4 class="text-dark">Vehicle Inspection & Licensing</h4>
+            <p>Inspection and certification of vehicles for roadworthiness through VIO services.</p>
+        </div>
+        <div class="col-md-6 my-3">
+            <img src="emmergency.jfif" class="service-img img-fluid rounded mb-3 mx-auto d-block" alt="Emergency Transport">
+            <h4 class="text-dark">Emergency Transport Services</h4>
+            <p>Quick response to road accidents in collaboration with health and security agencies.</p>
+        </div>
+    </div>
+</section>
 
     <!-- Institute of Transportation -->
-    <section class="container my-5">
-        <h2 class="text-center text-danger">Institute of Transportation</h2>
-        <p class="text-center">Empowering professionals with advanced transportation knowledge.</p>
+    <section class="container my-5 text-center">
+        <h2 class="text-danger">Institute of Transportation</h2>
+        <p>Empowering professionals with advanced transportation knowledge.</p>
         <p>Our Institute of Transportation is dedicated to research, training, and professional development in the field of transportation. We offer specialized programs in:</p>
-        <ul>
+        <ul class="list-unstyled">
             <li>Traffic Management & Road Safety</li>
             <li>Urban Transport Planning</li>
             <li>Public Transit Operations</li>
@@ -72,12 +84,60 @@
         </ul>
         <p>For more details, visit our institute section or contact us.</p>
     </section>
+<!-- Footer -->
+<footer class="footer text-white mt-3 py-3">
+    <div class="container">
+        <div class="text-center mb-2">
+            <h6 class="mb-1">Committed to Safe and Efficient Transportation</h6>
+            <p class="small mb-2">Building a modern transport system for the people of Kano State.</p>
+        </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Kano State Ministry of Transportation. All rights reserved.</p>
-    </footer>
+        <!-- Grid system to ensure four columns per row -->
+        <div class="row text-center">
+            <div class="col-12 col-md-3 mb-3 mb-md-0">
+                <h6 class="mb-1">Contact Us</h6>
+                <p class="small mb-0">Ministry of Transportation, Kano State</p>
+                <p class="small mb-0">No. 340, Goron Dutse, Aminu Kano Way, Kano, Nigeria</p>
+            </div>
+            <div class="col-12 col-md-3 mb-3 mb-md-0">
+                <h6 class="mb-1">Call Us</h6>
+                <p>
+                    <i class="fas fa-phone text-white"></i> 
+                    <a href="tel:+234 8032079753" class="text-white">+234 8032079753</a>
+                  </p>
+            </div>
+            <div class="col-12 col-md-3 mb-3 mb-md-0">
+                <h6 class="mb-1">Email Us</h6>
+                <p>
+                    <i class="fas fa-envelope"></i> 
+                    <a href="mailto:info@sekurefoundation.com.ng" class="text-white ">info@transportation.kano.gov.ng</a>
+                  </p>
+            </div>
+            <div class="col-12 col-md-3">
+                <h6 class="mb-1">Quick Links</h6>
+                <ul class="list-unstyled small mb-0">
+                    <li><a href="index.html" class="quick-link">Home</a></li>
+                    <li><a href="services.html" class="quick-link">Services</a></li>
+                    <li><a href="about.html" class="quick-link">About</a></li>
+                    <li><a href="projects.html" class="quick-link">Projects</a></li>
+                    <li><a href="contact.html" class="quick-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="text-center mt-3">
+            <p class="small mb-0">&copy; 2025 Kano State Ministry of Transportation. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to top button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="index.js"></script>
 </body>
 </html>

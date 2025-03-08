@@ -720,3 +720,9 @@ height: 290px; /* Fixed height for uniformity */
 object-fit: cover; /* Ensures images fill the space without distortion */
 width: 100%; /* Makes sure images stretch to fit the card width */
 }
+.service-img {
+    width: 100%; /* Ensures full width */
+    max-width: 300px; /* Limits max width */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures the image fills the area */
+}
