@@ -333,7 +333,7 @@ transform: translateX(250%);
 }
 .fixed-image, .circular-img {
     width: 70px; /* Keep consistent height and width */
-    height: 70px;
+    height: 72px;
     object-fit: cover; /* Ensures the image fully covers the circular area */
     border-radius: 50%;
 }
