@@ -726,3 +726,9 @@ width: 100%; /* Makes sure images stretch to fit the card width */
     height: 200px; /* Fixed height for uniformity */
     object-fit: cover; /* Ensures the image fills the area */
 }
+.navbar-brand-name {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: flex-start;
+}
