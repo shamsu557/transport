@@ -1,0 +1,27 @@
+{
+  "name": "kanoministryoftransport",
+  "version": "1.0.0",
+  "description": "Kano State Ministry of Transportation website with contact form using Nodemailer.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7",
+    "body-parser": "^1.20.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": ["transportation", "kano", "government", "node.js", "contact-form"],
+  "author": "Shamsu Sabo",
+  "license": "ISC"
+}
+
+ 
