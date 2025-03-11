@@ -728,3 +728,17 @@ width: 100%; /* Makes sure images stretch to fit the card width */
     font-weight: bold;
     white-space: nowrap;
 }
+@media screen and (max-width: 768px) { /* For tablets and smaller screens */
+    .navbar-brand-name {
+        margin-left: 0; /* Reduce spacing between the image and text */
+        font-weight: bold;
+        white-space: nowrap;
+        font-size: 0.6rem; /* Reduce font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) { /* For mobile screens */
+    .navbar-brand-name {
+        font-size: 0.5rem; /* Even smaller font for very small screens */
+    }
+}
