@@ -75,3 +75,15 @@ showNextNews();
 // Rotate news items every 5 seconds
 setInterval(showNextNews, 5000);
 });
+function toggleOtherField() {
+    var subject = document.getElementById("subject").value;
+    var otherField = document.getElementById("otherSubjectField");
+    
+    if (subject === "Other") {
+        otherField.style.display = "block";
+        document.getElementById("otherSubject").setAttribute("required", "true");
+    } else {
+        otherField.style.display = "none";
+        document.getElementById("otherSubject").removeAttribute("required");
+    }
+}

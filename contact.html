@@ -41,7 +41,7 @@
   </nav>
   <br><br><br><br><br>
     <!-- Contact Section -->
-    <section class="container my-5">
+    <section class="container my-5 bg-white">
         <div class="row text-center">
             <!-- Contact Details -->
             <div class="col-lg-6">
@@ -51,30 +51,42 @@
                 <p>Kano, Nigeria</p>
                 <p><i class="fas fa-envelope"></i> <a href="info@kanoministryoftransport.gov.ng">info@kanoministryoftransport.gov.ng</a></p>
                 <p><i class="fas fa-phone"></i> <a href="tel:+2348032079753">+234 8032079753</a></p>
+                <p><i class=""></i> <a href="tel:+234 8033627649">+234 8033627649</a></p>
             </div>
-            
             <!-- Contact Form -->
-            <div class="col-lg-6">
-                <h2 class="text-danger">Send Us a Message</h2>
-                <form id="contactForm" method="POST" action="/send-message">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-danger">Submit</button>
-                </form>
-            </div>
+<div class="col-lg-6">
+    <h2 class="text-danger">Submit a Complaint or Inquiry</h2>
+    <form id="contactForm" method="POST" action="/send-message">
+        <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
         </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <select class="form-control" id="subject" name="subject" required onchange="toggleOtherField()">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Complaint">Complaint</option>
+                <option value="Inquiry">Inquiry</option>
+                <option value="Suggestion">Suggestion</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="mb-3" id="otherSubjectField" style="display: none;">
+            <label for="otherSubject" class="form-label">Please specify</label>
+            <input type="text" class="form-control" id="otherSubject" name="otherSubject">
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+</div>
     </section>
-    
     <!-- Google Map -->
     <div class="container my-4">
         <h3 class="text-center text-danger">Our Location</h3>
@@ -104,19 +116,22 @@
                     <i class="fas fa-phone text-white"></i> 
                     <a href="tel:+234 8032079753" class="text-white">+234 8032079753</a>
                   </p>
+                  <p>
+                    <a href="tel:+234 8033627649" class="text-white">+234 8099335169</a>
+                </p>
             </div>
             <div class="col-12 col-md-3 mb-3 mb-md-0">
                 <h6 class="mb-1">Email Us</h6>
                 <p>
                     <i class="fas fa-envelope"></i> 
-                    <a href="mailto:info@sekurefoundation.com.ng" class="text-white ">info@transportation.kano.gov.ng</a>
+                    <a href="mailto:info@kanoministryoftransport.org.ng" class="text-white ">info@kanoministryoftransport.org.ng</a>
                   </p>
             </div>
             <div class="col-12 col-md-3">
                 <h6 class="mb-1">Quick Links</h6>
                 <ul class="list-unstyled small mb-0">
                     <li><a href="index.html" class="quick-link">Home</a></li>
-                    <li><a href="services.html" class="quick-link">Services</a></li>
+                    <li><a href="services.html" class="quick-link">Services</a>
                     <li><a href="about.html" class="quick-link">About</a></li>
                     <li><a href="projects.html" class="quick-link">Projects</a></li>
                     <li><a href="contact.html" class="quick-link">Contact</a></li>
